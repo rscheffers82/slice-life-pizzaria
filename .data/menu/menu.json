@@ -1,0 +1,41 @@
+{
+    "pizza": [
+        {
+            "id": "655d-462a-95d2",
+            "name": "The Godfather Pizza",
+            "description": "Gourmet Italian sausage, fresh garlic, onions & Rosati’s hot giardiniera.",
+            "size": "",
+            "price": 15.99
+        }, {
+            "id": "da8e-9f48-eac6",
+            "name": "The Veggie Pizza",
+            "description": "Vegetarian. Mushrooms, onions & green peppers with tomatoes on top.",
+            "size": "",
+            "price": 13.99
+        }, {           
+            "id": "b48e-4f29-a6eb",
+            "name": " White Pizza",
+            "description": "Vegetarian. Olive oil, fresh garlic & sauteed spinach with tomatoes on top (no pizza sauce).",
+            "size": "",
+            "price": 12.99
+        }, {
+            "id": "8566-40c0-b584",
+            "name": "The Hawaiian Pizza",
+            "description": "A blend of Rosati’s pizza & BBQ sauces, topped with Canadian bacon & pineapple.",
+            "size": "",
+            "price": 17.99
+        }, {
+            "id": "9f7b-4d13-8d4a",
+            "name": "Meat Mania Pizza",
+            "description": "Gourmet Italian sausage, meatballs & pepperoni with bacon on top.",
+            "size": "",
+            "price": 21.99
+        }, {
+            "id": "1e5c-496d-8ace",
+            "name": "Fabulous Four Pizza",
+            "description": "Gourmet Italian sausage, mushrooms, onions & green peppers.",
+            "size": "",
+            "price": 17.99
+        }
+    ]
+}
