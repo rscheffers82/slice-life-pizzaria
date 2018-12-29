@@ -1,8 +1,8 @@
 {
-    "655d-462a-95d3": {
-        "id": "655d-462a-95d3",
+    "655d-462a-95d2": {
+        "id": "655d-462a-95d2",
         "name": "The Godfather Pizza",
-        "description": "Gourmet Italian sausage, fresh garlic, onions & Rosati’s hot giardiniera.",
+        "description": "Gourmet Italian sausage, fresh garlic, onions & our hot giardiniera.",
         "sizeUpPrice": 1.50,
         "price": 15.99
     },
@@ -23,14 +23,14 @@
     "8566-40c0-b584": {
         "id": "8566-40c0-b584",
         "name": "The Hawaiian Pizza",
-        "description": "A blend of Rosati’s pizza & BBQ sauces, topped with Canadian bacon & pineapple.",
+        "description": "A blend of our special pizza & BBQ sauces, topped with Australian bacon, and pineapple.",
         "sizeUpPrice": 1.00,
         "price": 17.99
     },
     "9f7b-4d13-8d4a": {
         "id": "9f7b-4d13-8d4a",
         "name": "Meat Mania Pizza",
-        "description": "Gourmet Italian sausage, meatballs & pepperoni with bacon on top.",
+        "description": "Gourmet Italian sausage, meatballs & pepperoni with turkey bacon on top.",
         "sizeUpPrice": 1.75,
         "price": 21.99
     },
