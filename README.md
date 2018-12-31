@@ -1,12 +1,14 @@
-## JSON API for Pizza Delivery Company
+## JSON API for Slice Life Pizzaria, a pizza delivery company
 
 NodeJS server for Pizza Delivery Company that has the following routes available:
 
 | Route | Description |
 | --- | --- |
-|`/users` | Create, Update and delete manage users
+|`/users` | CRUD operations to manage users
 |`/tokens` | CRUD operations to manage tokens
-<!-- |`/cart` | CRUD operations to manage a cart -->
+|`/api/cart` | view or empty cart and add or remove an item
+|`/api/order` | POST route to create an order, process payment through Stripe and email a confirmation
+|`/api/menu` | GET route to view the menu
 
 When no route is found a `404` status will be returned.
 
@@ -23,6 +25,13 @@ Windows: `set NODE_ENV=production&& node index.js`
 
 In order to personalise the https server, create a new certificate in the https folder with the following files `cert.pem` and `key.pem`. Instructions can be found [here](https://github.com/rscheffers82/RESTful-api/tree/master/https).
 -->
+
+## Email confirmation
+
+After a successfull transaction an order confirmation is sent to the user's email address. Here's an example.
+
+![Order Confirmation email](https://raw.githubusercontent.com/rscheffers82/slice-life-pizzaria/master/public/email-example.jpg)
+
 
 ## Debugging
 
