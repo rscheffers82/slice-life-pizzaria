@@ -1,0 +1,448 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Slice Life Pizzaria",
+		"_postman_id": "13676df4-a682-9596-d5a8-40df7ee1989d",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create a new user",
+			"request": {
+				"url": "localhost:3000/api/users",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\":\"Bobby Diamond\",\n\t\"email\": \"b@diamond.com\",\n\t\"password\": \"YouWishIWouldTellYou1!\",\n\t\"address\": \"13 Loaded Boulevard, Los Angeles, CA 90071\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get user details",
+			"request": {
+				"url": {
+					"raw": "localhost:3000/api/users?email=b@diamond.com",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "b@diamond.com",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "token",
+						"value": "5xJzt7mE18aJVwwyw7IH4S",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": "localhost:3000/api/users"
+			},
+			"response": []
+		},
+		{
+			"name": "Update user details",
+			"request": {
+				"url": "localhost:3000/api/users",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "token",
+						"value": "5xJzt7mE18aJVwwyw7IH4S",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\":\"Bobbie Diamond\",\n\t\"email\": \"b@diamond.com\",\n\t\"address\": \"New address\"\n}"
+				},
+				"description": "PUT localhost:3000/api/users"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a user",
+			"request": {
+				"url": {
+					"raw": "localhost:3000/api/users?email=b@diamond.com",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "b@diamond.com",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "token",
+						"value": "vPxQrUeqtYxR2zlXxV1S66",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "DELETE localhost:3000/api/users"
+			},
+			"response": []
+		},
+		{
+			"name": "Create a token",
+			"request": {
+				"url": "localhost:3000/api/tokens",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\": \"b@diamond.com\",\n\t\"password\": \"YouWishIWouldTellYou1!\"\n}"
+				},
+				"description": "POST localhost:3000/api/tokens"
+			},
+			"response": []
+		},
+		{
+			"name": "Check the status of a token",
+			"request": {
+				"url": {
+					"raw": "localhost:3000/api/tokens?id=5xJzt7mE18aJVwwyw7IH4S",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"tokens"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "5xJzt7mE18aJVwwyw7IH4S",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": \"82GfZ3TTzFjbSvhsEiOJZZ\",\n\t\"extend\": true\n}"
+				},
+				"description": "GET localhost:3000/api/tokens"
+			},
+			"response": []
+		},
+		{
+			"name": "Extend a token",
+			"request": {
+				"url": "localhost:3000/api/tokens",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": \"82GfZ3TTzFjbSvhsEiOJZZ\",\n\t\"extend\": true\n}"
+				},
+				"description": "PUT localhost:3000/api/tokens"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a token",
+			"request": {
+				"url": {
+					"raw": "localhost:3000/api/tokens?id=82GfZ3TTzFjbSvhsEiOJZZ",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"tokens"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "82GfZ3TTzFjbSvhsEiOJZZ",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": "DELETE localhost:3000/api/tokens"
+			},
+			"response": []
+		},
+		{
+			"name": "GET all menu items",
+			"request": {
+				"url": {
+					"raw": "localhost:3000/api/menu?email=b@diamond.com",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"menu"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "b@diamond.com",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "token",
+						"value": "5xJzt7mE18aJVwwyw7IH4S",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": "GET: localhost:3000/api/menu?email=b@diamond.com"
+			},
+			"response": []
+		},
+		{
+			"name": "Add item to cart",
+			"request": {
+				"url": "localhost:3000/api/cart",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "token",
+						"value": "5xJzt7mE18aJVwwyw7IH4S",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\": \"b@diamond.com\",\n\t\"id\":\"655d-462a-95d2\",\n\t\"size\": 18,\n\t\"amount\": 2\n}"
+				},
+				"description": "POST localhost:3000/api/cart"
+			},
+			"response": []
+		},
+		{
+			"name": "View cart",
+			"request": {
+				"url": {
+					"raw": "localhost:3000/api/cart?email=b@diamond.com",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"cart"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "b@diamond.com",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "token",
+						"value": "Roy6ABySlmFroWbG2Mpzq3",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": "GET localhost:3000/api/cart"
+			},
+			"response": []
+		},
+		{
+			"name": "Remove item / empty cart",
+			"request": {
+				"url": {
+					"raw": "localhost:3000/api/cart?email=b@diamond.com",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"cart"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "b@diamond.com",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "token",
+						"value": "5xJzt7mE18aJVwwyw7IH4S",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": "DELETE localhost:3000/api/cart"
+			},
+			"response": []
+		},
+		{
+			"name": "Create/place an order",
+			"request": {
+				"url": "localhost:3000/api/order",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "token",
+						"value": "Roy6ABySlmFroWbG2Mpzq3",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\": \"b@diamond.com\"\n}"
+				},
+				"description": "localhost:3000/api/order"
+			},
+			"response": []
+		}
+	]
+}
