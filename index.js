@@ -63,6 +63,11 @@ unifiedServer = (req, res) => {
         // route not available, route to notFound
         let chosenHandler = typeof(router[trimmedPath]) !== 'undefined' ? router[trimmedPath] : router.notFound;
 
+        // When a OPTIONS preflight request is made route the reflight handler
+        if (method === 'options') {
+            chosenHandler = router['preflight'];
+        };
+
         // Construct data object to send to the handler
         const data = {
             trimmedPath,
@@ -78,6 +83,13 @@ unifiedServer = (req, res) => {
             contentType = typeof(contentType) === 'string' ? contentType : 'json';
             statusCode = typeof(statusCode) === 'number' ? statusCode : 200;
 
+            // Add headers for details with CORS
+            // Only requests from localhost:3000 are allowed (e.g. react SAP)
+            res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000',);
+            res.setHeader('Access-Control-Allow-Methods', 'POST, GET, PUT, DELETE, OPTIONS');
+            res.setHeader('Access-Control-Max-Age', 2592000); // 30 days
+            res.setHeader('Access-Control-Allow-Headers', 'Content-Type',);
+        
             // Return the response parts that are content specific
             let payloadString = '';
             if (contentType === 'json') {
@@ -123,7 +135,7 @@ unifiedServer = (req, res) => {
             const green = '\x1b[32m%s\x1b[0m';
             const red = '\x1b[31m%s\x1b[0m';
 
-            if ([200, 201].includes(statusCode)) {
+            if ([200, 201, 204].includes(statusCode)) {
                 debug(green, method.toUpperCase() + ' /' + trimmedPath + ' ' + statusCode);
             } else {
                 debug(red, method.toUpperCase() + ' /' + trimmedPath + ' ' + statusCode);
