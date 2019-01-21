@@ -3,10 +3,11 @@ import { Route, Redirect } from "react-router-dom";
 
 const PrivateRoute = ({ component: Component, userDetails, ...rest }) => (
   <Route
-    {...{ rest, userDetails }}
+    {...rest}
     render={props =>
-      userDetails.email && userDetails.token ? (
-        <Component {...props} />
+      // userDetails.email && userDetails.token ? (
+      true ? (
+        <Component {...props} userDetails={userDetails} />
       ) : (
         <Redirect
           to={{
