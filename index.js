@@ -149,7 +149,7 @@ httpServer.listen(config.httpPort, () => {
     "The server is listing on port " + config.httpPort,
     "in",
     config.envName,
-    "mode"
+    "mode (http)"
   );
 });
 
@@ -161,7 +161,7 @@ if (certificateAvailable) {
       "The server is listing on port " + config.httpsPort,
       "in",
       config.envName,
-      "mode"
+      "mode (https)"
     );
   });
 }
